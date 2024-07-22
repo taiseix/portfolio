@@ -1,0 +1,412 @@
+body{
+    margin: 0;
+}
+
+/* Loading背景画面設定　*/
+#splash {
+    /*fixedで全面に固定*/
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: 999;
+      background:#ff2b2b;
+      text-align:center;
+      color:#fff;
+    }
+    
+    /* Loading画像中央配置　*/
+    #splash_logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    /* Loading アイコンの大きさ設定　*/
+    #splash_logo img {
+      width:260px;
+    }
+
+    #splash_buttom{
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        width: 175px;
+        height: 50px;
+        background-color: white;
+        animation-name: fadeUpAnime;
+        animation-duration:2.0s;
+        animation-fill-mode:forwards;
+        opacity: 0;
+    }
+    #splash_buttom .buttom_p{
+        color: black;
+        
+    }
+    
+    /* fadeUpをするアイコンの動き */
+    .fadeUp{
+    animation-name: fadeUpAnime;
+    animation-duration:1.5s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+    }
+    
+    @keyframes fadeUpAnime{
+      from {
+        opacity: 0;
+      transform: translateY(100px);
+      }
+    
+      to {
+        opacity: 1;
+      transform: translateY(0);
+      }
+    }
+
+
+
+
+
+/* ハンバーガーメニューのスタイル */
+.menu {
+    top: 20px;
+    right: 0;
+    cursor: pointer;
+  }
+  strong{
+    position: fixed;
+    color: #FFFFFF;
+    top: 55px;
+    right: 8px;
+    width: 44px;
+    height: 12px;
+    z-index: 998;
+    font: normal normal bold 12px/1px BIZ UDPGothic;
+  }
+  .square-menu{
+    position: fixed;
+    top: 8px;
+    right: 0px;
+    width: 67px;
+    height: 65px;
+    border-radius: 12px 0px 0px 12px;
+    background: #FFD610;
+    z-index: 997;
+  }
+  .hamburger {
+    display: block;
+    top: 30px;
+    right:10px;
+    width: 45px;
+    height: 5px;
+    background-color: #FFFFFF;
+    position: fixed;
+    transition: background-color 0.3s ease;
+    z-index: 998;
+  }
+  
+  .hamburger:before,
+  .hamburger:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    position: absolute;
+    transition: transform 0.3s ease;
+  }
+  
+  .hamburger:before {
+    top: -10px;
+  }
+  
+  .hamburger:after {
+    bottom: -10px;
+  }
+  
+  /* メニューの開閉時のスタイル */
+  #menu-toggle:checked + .menu .hamburger {
+    background-color: transparent;
+  }
+  
+  #menu-toggle:checked + .menu .hamburger:before {
+    transform: translateY(10px) rotate(45deg);
+  }
+  
+  #menu-toggle:checked + .menu .hamburger:after {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+  
+  /* メニューのコンテンツ */
+  .menu-content {
+    position: fixed;
+    z-index: 997;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background: #FFD610;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+
+  input[type="checkbox"]:checked ~ .menu-content {
+    right: 0;
+  }
+  
+  .menu-content nav {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+  
+  .menu-content ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  
+  .menu-content ul li {
+    margin-bottom: 20px;
+  }
+  
+  .menu-content ul li a {
+    color: #FFFFFF;
+    font-size: 20px;
+  }
+  
+  /* チェックボックスを隠す */
+  .hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+
+
+
+
+
+
+.titele{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 990;
+    font-size: 50px;
+}
+    .slider {
+        position:relative;
+        z-index: 1;
+        /*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
+        height: 100vh;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+        padding-left: 0;
+        margin-top: 0;
+    }
+    /*　背景画像設定　*/
+    
+    .slider-item01 {
+        background:url(photo1.jpg);
+    }
+    
+    .slider-item02 {
+        background:url(photo1.jpg);
+    }
+    
+    .slider-item03 {
+        background:url(photo1.jpg);
+    }
+    
+    .slider-item {
+        width: 100%;/*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+        height:100vh;/*各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+        background-repeat: no-repeat;/*背景画像をリピートしない*/
+        background-position: center;/*背景画像の位置を中央に*/
+        background-size: cover;/*背景画像が.slider-item全体を覆い表示*/
+    }
+    
+    /*矢印の設定*/
+    
+    /*戻る、次へ矢印の位置*/
+    .slick-prev, 
+    .slick-next {
+        position: absolute;/*絶対配置にする*/
+        z-index: 3;
+        top: 42%;
+        cursor: pointer;/*マウスカーソルを指マークに*/
+        outline: none;/*クリックをしたら出てくる枠線を消す*/
+        border-top: 2px solid #ccc;/*矢印の色*/
+        border-right: 2px solid #ccc;/*矢印の色*/
+        height: 25px;
+        width: 25px;
+    }
+    
+    .slick-prev {/*戻る矢印の位置と形状*/
+        left:2.5%;
+        transform: rotate(-135deg);
+    }
+    
+    .slick-next {/*次へ矢印の位置と形状*/
+        right:2.5%;
+        transform: rotate(45deg);
+    }
+    
+    /*ドットナビゲーションの設定*/
+    
+    .slick-dots {
+        position: relative;
+        z-index: 3;
+        text-align:center;
+        margin:-50px 0 0 0;
+    }
+    
+    .slick-dots li {
+        display:inline-block;
+        margin:0 5px;
+    }
+    
+    .slick-dots button {
+        color: transparent;
+        outline: none;
+        width:8px;/*ドットボタンのサイズ*/
+        height:8px;/*ドットボタンのサイズ*/
+        display:block;
+        border-radius:50%;
+        background:#ccc;/*ドットボタンの色*/
+    }
+    
+    .slick-dots .slick-active button{
+        background:#333;/*ドットボタンの現在地表示の色*/
+    }
+
+
+h2{
+    text-align: center;
+    font-size: 30px;
+}
+
+#about{
+    padding-top: 200px;
+    }
+    .about_in{
+        display: flex;
+        flex-direction: row;
+        gap: 4rem; 
+        padding-top: 100px;
+    }
+    .about_in img{
+        border-radius: 50%;
+        width: 300px;
+        height: 300px;
+    }
+    .about_img{
+        flex: 1;
+        text-align: center;
+    }
+    .about_txt{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+
+#skill{
+    padding-top: 200px;
+}
+.skillgrid{
+    padding-top: 100px;
+}
+/* 通常時 */
+.effect-mono {
+        filter: grayscale(100); /* モノクロにする */
+        transition: filter 0.7s;
+    }
+
+    /* ホバー時 */
+    .effect-mono:hover {
+        filter: grayscale(0); /* モノクロを解除する */
+    }
+    
+    .fadeUpTrigger{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        list-style-type: none;
+        gap: 50px;
+        padding-left: 0;
+    }
+
+    .fadeUp1{
+        animation-name: fadeUpAnime1;
+        animation-duration:4.0s;
+        animation-fill-mode:forwards;
+        opacity: 0;
+    }
+    @keyframes fadeUpAnime1{
+        from {
+            opacity: 0;
+            transform: translateY(-100px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        }
+
+    
+
+
+
+#contact{
+    padding-top: 200px;
+    padding-bottom: 200px;
+    }
+    .my-social{
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        gap: 4rem;
+        font-size: 35px;
+        padding-left: 0;
+    }
+    .my-social li a {
+        display: inline-block; /* リンクテキストをインラインブロック要素として表示 */
+        text-decoration: none;  /* リンクテキストの装飾をなくす */
+        color: var(--text-color);  /* 文字色をデフォルトのリンクカラーからこの文書の文字色へ変更 */
+        cursor: pointer; /* この要素にマウスオーバーしたとき、マウスカーソルを指に変更 */
+        transition: 1s color; /* 文字色が変化する場合、１秒かけて変化させる定義 */
+    }
+    .my-social li a:hover {
+        color: #f00;  /* 文字色を変える(任意の文字色に変えて良い) */
+    }
+
+
+
+
+
+
+
+
+    @media (min-width: 769px) {
+        .fadeUpTrigger{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            text-align: center;
+            list-style-type: none;
+        }
+    }

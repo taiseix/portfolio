@@ -5,9 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ポートフォリオ</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/bold/style.css" />
+    <link rel="stylesheet" href="p.css">
 </head>
 <body>
-    <h1>Hello, GitHub!!</h1>
-    <p>this web site is sample site.</p>
+    <div id="splash">
+        <div id="splash_logo"><img src="09_01_contour_x23042.jpg" class="fadeUp"></div>
+        <div id="splash_buttom"><p class="buttom_p">home</p></div>
+        <!--/splash--></div>
+        <main>
+            <header>
+                <div class="menu">
+                    <input type="checkbox" id="menu-toggle" class="hidden">
+            <label for="menu-toggle" class="menu">
+                <span class="hamburger"></span>
+                <strong>MENU</strong>
+                <div class="square-menu"></div>
+            </label>
+            <div class="menu-content">
+                <nav class="m">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skill">Skill</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+                <!--/menu--></div>
+            </header>
+            <div id="home">
+                <h1 class="titele">portfolio</h1>
+                <ul class="slider">
+                    <li class="slider-item slider-item01"></li>
+                    <li class="slider-item slider-item02"></li>
+                    <li class="slider-item slider-item03"></li>
+                </ul>
+            <!--/home--></div>
+            <div id="about">
+                <h2>ABOUT</h2>
+                <div class="about_in">
+                <div class="about_img">
+                <img src="image.png">
+                </div>
+                <div class="about_txt">
+                    <h3>自己紹介</h3>
+                    <p>自己紹介文をここに入れる</p>
+                </div>
+                </div>
+            <!--/about--></div>
+            <div id="skill">
+                <h2>SKILL</h2>
+                <div class="skillgrid">
+                    <ul class="box fadeUpTrigger">
+                    <li> <a href="index1.html"><img src="image.png" class="effect-mono"/></a></li>
+                    <li> <a href="index2.html"><img src="image.png" class="effect-mono"/></a></li>
+                    <li> <a href="index3.html"><img src="image.png" class="effect-mono"/></a></li>
+                    <li> <a href="index4.html"><img src="image.png" class="effect-mono"/></a></li>
+                    </ul>
+                </div>
+            <!--/skill--></div>
+            <div id="contact">
+                <h2>CONTACT</h2>
+                <ul class="my-social">
+                    <li><a href="mailto:portfolio@gmail.com"><i class="ph-bold ph-paper-plane-tilt"></i></a></li>
+                    <li><a href="https://twitter.com/"><i class="ph-bold ph-twitter-logo"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="ph-bold ph-instagram-logo"></i></a></li>
+                  </ul>
+            <!--/contact--></div>
+        <!--/main--></main>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="script.js"></script>
+    <script src="script1.js"></script>
+    <script src="script2.js"></script>
 </body>
 </html>
