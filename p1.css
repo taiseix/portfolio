@@ -1,8 +1,50 @@
+.sakuhinn p{
+    font-size: 70px;
+    margin-bottom: 40px;
+}
 .pagejump a{
     display: flex;
     justify-content: center;
     font-size: 40px;
     padding-bottom: 20px;
+}
+.sbox{
+    overflow-x: scroll;
+    overflow: scroll;
+}
+/* スクロールバーの幅と高さを設定する */
+.scrollbar::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  /* スクロールバーの形を設定する */
+  .scrollbar-thumb-rounded::-webkit-scrollbar-thumb {
+    border-radius: 0.25rem;
+  }
+  /* スクロールバーの色を設定する */
+  .scrollbar-thumb-black::-webkit-scrollbar-thumb {
+    --bg-opacity: 1;
+    background-color: rgb(75, 75, 75);
+  }
+.simg{
+    display: flex;
+    list-style-type: none;
+    gap: 2rem;
+    padding-left: 0;
+    text-align: left;
+    transition-duration: 0.5s;
+}
+.simg img:hover{
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+    transform: translateY(-10px);
+    transition-duration: 0.5s;
+  }
+  
+.simg img{
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+
 }
 .slider{
     display: flex;
@@ -11,8 +53,23 @@
     justify-content: center;
     gap: 2rem;
     padding-left: 0;
+    overflow-x: scroll;
 }
 .slider img{
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
+}
+.pagejump{
+    margin-top: 100px;
+}
+@media (min-width: 769px) {
+    .simg img{
+        width: 300px;
+        height: 300px;
+        cursor: pointer;
+    }
+    .slider img{
+        width: 100px;
+        height: 100px;
+    }
 }

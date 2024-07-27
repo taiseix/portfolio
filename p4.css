@@ -1,3 +1,7 @@
+.sakuhinn p{
+    font-size: 70px;
+    margin-bottom: 40px;
+}
 .pagejump a{
     display: flex;
     justify-content: center;
@@ -28,10 +32,19 @@
     gap: 2rem;
     padding-left: 0;
     text-align: left;
+    transition-duration: 0.5s;
 }
+.simg img:hover{
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+    transform: translateY(-10px);
+    transition-duration: 0.5s;
+  }
+  
 .simg img{
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+
 }
 .slider{
     display: flex;
@@ -43,6 +56,20 @@
     overflow-x: scroll;
 }
 .slider img{
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
+}
+.pagejump{
+    margin-top: 100px;
+}
+@media (min-width: 769px) {
+    .simg img{
+        width: 300px;
+        height: 300px;
+        cursor: pointer;
+    }
+    .slider img{
+        width: 100px;
+        height: 100px;
+    }
 }
