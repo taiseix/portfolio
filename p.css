@@ -9,7 +9,7 @@ body{
       width: 100%;
       height: 100%;
       z-index: 999;
-      background:#ff2b2b;
+      background:hsl(215, 32%, 46%);
       text-align:center;
       color:#fff;
     }
@@ -29,6 +29,7 @@ body{
 
     #splash_buttom{
         position: absolute;
+        width: 100%;
         top: 70%;
         left: 50%;
         width: 175px;
@@ -37,11 +38,12 @@ body{
         animation-name: fadeUpAnime;
         animation-duration:2.0s;
         animation-fill-mode:forwards;
+        text-align: center;
+        justify-content: center;
         opacity: 0;
     }
     #splash_buttom .buttom_p{
         color: black;
-        
     }
     
     /* fadeUpをするアイコンの動き */
@@ -215,6 +217,7 @@ body{
         height: 100vh;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
         padding-left: 0;
         margin-top: 0;
+        margin-bottom: 0;
     }
     /*　背景画像設定　*/
     
@@ -296,6 +299,9 @@ body{
 h2{
     text-align: center;
     font-size: 30px;
+    background: #666666;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 #about{
@@ -303,7 +309,7 @@ h2{
     }
     .about_in{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         gap: 4rem; 
         padding-top: 100px;
     }
@@ -328,27 +334,31 @@ h2{
 }
 .skillgrid{
     padding-top: 100px;
-}
-/* 通常時 */
-.effect-mono {
-        filter: grayscale(100); /* モノクロにする */
-        transition: filter 0.7s;
-    }
-
-    /* ホバー時 */
-    .effect-mono:hover {
-        filter: grayscale(0); /* モノクロを解除する */
-    }
-    
+}    
     .fadeUpTrigger{
         display: flex;
         flex-direction: column;
         text-align: center;
+        align-items: center;
         list-style-type: none;
         gap: 50px;
         padding-left: 0;
     }
-
+    .fadeUpTrigger img{
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+    }
+    .effect-mono{
+            display: block;
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: box-shadow 0.3s ease;
+    }
+    .effect-mono:hover{
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    } 
     .fadeUp1{
         animation-name: fadeUpAnime1;
         animation-duration:4.0s;
@@ -394,7 +404,7 @@ h2{
         font-size: 50px;
     }
     .my-social li a:hover {
-        color: #f00;  /* 文字色を変える(任意の文字色に変えて良い) */
+        color: rgb(0, 136, 255);  /* 文字色を変える(任意の文字色に変えて良い) */
     }
 
 
@@ -405,11 +415,49 @@ h2{
 
 
     @media (min-width: 769px) {
+        #about{
+            padding-top: 200px;
+            }
+            .about_in{
+                display: flex;
+                flex-direction: row;
+                gap: 4rem; 
+                padding-top: 100px;
+            }
+            .about_in img{
+                border-radius: 50%;
+                width: 300px;
+                height: 300px;
+            }
+            .about_img{
+                flex: 1;
+                text-align: center;
+            }
+            .about_txt{
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+            }
         .fadeUpTrigger{
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
-            text-align: center;
+            place-items: center;
             list-style-type: none;
+        }
+        .fadeUpTrigger img{
+            width: 300px;
+            height: 300px;
+            border-radius: 40%;
+        }
+        /* 通常時 */
+        .effect-mono {
+            filter: grayscale(100); /* モノクロにする */
+            transition: filter 0.7s;
+        }
+
+        /* ホバー時 */
+        .effect-mono:hover {
+            filter: grayscale(0); /* モノクロを解除する */
         }
     }
