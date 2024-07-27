@@ -4,6 +4,35 @@
     font-size: 40px;
     padding-bottom: 20px;
 }
+.sbox{
+    overflow-x: scroll;
+    overflow: scroll;
+}
+/* スクロールバーの幅と高さを設定する */
+.scrollbar::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  /* スクロールバーの形を設定する */
+  .scrollbar-thumb-rounded::-webkit-scrollbar-thumb {
+    border-radius: 0.25rem;
+  }
+  /* スクロールバーの色を設定する */
+  .scrollbar-thumb-black::-webkit-scrollbar-thumb {
+    --bg-opacity: 1;
+    background-color: rgb(75, 75, 75);
+  }
+.simg{
+    display: flex;
+    list-style-type: none;
+    gap: 2rem;
+    padding-left: 0;
+    text-align: left;
+}
+.simg img{
+    width: 300px;
+    height: 300px;
+}
 .slider{
     display: flex;
     flex-direction: row;
@@ -11,4 +40,9 @@
     justify-content: center;
     gap: 2rem;
     padding-left: 0;
+    overflow-x: scroll;
+}
+.slider img{
+    width: 100px;
+    height: 100px;
 }
