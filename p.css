@@ -24,27 +24,10 @@ body{
     
     /* Loading アイコンの大きさ設定　*/
     #splash_logo img {
-      width:260px;
+      width:460px;
     }
 
-    #splash_buttom{
-        position: absolute;
-        width: 100%;
-        top: 70%;
-        left: 50%;
-        width: 175px;
-        height: 50px;
-        background-color: white;
-        animation-name: fadeUpAnime;
-        animation-duration:2.0s;
-        animation-fill-mode:forwards;
-        text-align: center;
-        justify-content: center;
-        opacity: 0;
-    }
-    #splash_buttom .buttom_p{
-        color: black;
-    }
+    
     
     /* fadeUpをするアイコンの動き */
     .fadeUp{
