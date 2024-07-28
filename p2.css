@@ -1,6 +1,9 @@
 .sakuhinn p{
     font-size: 70px;
     margin-bottom: 40px;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: rgb(135, 135, 135);
 }
 .pagejump a{
     display: flex;
@@ -64,12 +67,15 @@
 }
 @media (min-width: 769px) {
     .simg img{
-        width: 300px;
+        width: 400px;
         height: 300px;
         cursor: pointer;
     }
     .slider img{
         width: 100px;
         height: 100px;
+    }
+    .sakuhinn p{
+        text-align: left;
     }
 }
